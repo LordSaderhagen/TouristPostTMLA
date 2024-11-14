@@ -1,0 +1,135 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main__box {
+    position: absolute;
+    width: 300px;
+    height: 540px;
+    backface-visibility: hidden;  
+    background-color:var(--bg-button-base);
+    background-image: url(https://i0.wp.com/tmluxuryapartments.com/wp-content/uploads/2021/03/EMPREENDIMENTO-TARDOZ-RUA-SAO-JOSE.jpg?w=850&h=567&ssl=1);
+    border-radius: 25px;
+}
+
+.main__box__icon {
+    position: relative;
+    top: -350px;
+    left: 75px;
+    width: 152px;
+    height: 82px;
+    opacity: 1;
+    background-image: url(https://lh3.googleusercontent.com/proxy/67ACm5n6aergmK7ylmmpWPtlpxByyodCz29FFAzHzkX0JO9YEBXiTZ3RLCr1d_kmEfVN-oDuGPq7CQcTvlY);
+    background-color: #ffffff22;
+    border-radius: 90px;
+}
+
+.main__box:hover .main__box__icon {
+    transition: .5s none;
+    position: relative;
+    top: -100px;
+    left: 75px;
+    background-color: transparent;
+}
+
+.main__box:hover .main__bg {
+    background-color: var(--bg-effect-base);
+}
+
+.main__bg {
+    height: 560px;
+    margin-top: -20px;
+}
+
+.main__content {
+    visibility: hidden;
+}
+
+.main__box:hover .main__content {
+    transition: .5s none;
+    display: flex;
+    visibility: visible;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.main__content a {
+    color: var(--text-base-info);
+    white-space: nowrap;
+    letter-spacing: 0;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+.menu__button {
+    display: block;
+    background-color: var(--bg-button-base);
+    font: 13px Helvetica, Sans-Serif;
+    font-weight: bold;
+    border: 1px solid #ffffff80;
+    border-radius: 10px;
+    margin: 35px 0;
+    width: 165px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.menu__button:hover {
+    background-color: var(--bg-button-effect);
+    color: var(--text-effect-tags);
+    font-style: italic;
+}
+
+.menu__button__tag {
+    position: relative;
+    margin: -0.5em;
+    width: 12.5em;
+    opacity: 1;
+}
+
+.menu__button:hover .menu__button__tag {
+    opacity: 0;
+}
+
+.menu__button__info {
+    opacity: 0;
+}
+
+.menu__button:hover .menu__button__info {
+    opacity: 1;
+}
+
+.menu__button__trad {
+    position: absolute;
+    margin: -0.6em;
+    width: 12.8em;
+}
+
+.menu__button__trad:nth-child(1){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;  
+}   
+  
+.menu__button__trad:nth-child(2){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+  
+@keyframes fade{
+      0%,50% {
+        opacity: 0;
+    }
+      100%{
+        opacity: 1;
+    }
+}
